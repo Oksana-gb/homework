@@ -1,5 +1,0 @@
-C:\Users\oks\Desktop\дз\obj\Debug\net6.0\дз.csproj.AssemblyReference.cache
-C:\Users\oks\Desktop\дз\obj\Debug\net6.0\дз.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\oks\Desktop\дз\obj\Debug\net6.0\дз.AssemblyInfoInputs.cache
-C:\Users\oks\Desktop\дз\obj\Debug\net6.0\дз.AssemblyInfo.cs
-C:\Users\oks\Desktop\дз\obj\Debug\net6.0\дз.csproj.CoreCompileInputs.cache
