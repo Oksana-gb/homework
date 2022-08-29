@@ -10,12 +10,13 @@
 // else
 //     Console.WriteLine("некратно");
 
-Console.WriteLine("введите число 1");
-int a = int.Parse(Console.ReadLine());
-Console.WriteLine("введите число 2");
-int b = int.Parse(Console.ReadLine());
-if (a * a == b)
-    Console.WriteLine("число 1 в квадрате равно числу 2");
-else if (b * b == a )
-     Console.WriteLine("число 2 в квадрате равно числу 1");
-else Console.WriteLine("числа не являются квадратом друг дурга");
+// Console.WriteLine("введите число 1");
+// int a = int.Parse(Console.ReadLine());
+// Console.WriteLine("введите число 2");
+// int b = int.Parse(Console.ReadLine());
+// if (a * a == b)
+//     Console.WriteLine("число 1 в квадрате равно числу 2");
+// else if (b * b == a )
+//      Console.WriteLine("число 2 в квадрате равно числу 1");
+// else Console.WriteLine("числа не являются квадратом друг дурга");
+
