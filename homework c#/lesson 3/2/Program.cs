@@ -1,23 +1,18 @@
-﻿Console.WriteLine("введите число");
-char[] a = Console.ReadLine().ToCharArray();
-int array = a.Length;
-int i = 0;
-int count = 1;
-int sum = 0;
-while (count < array / 2 + 1)
-{
-    if (a[a.Length - count] == a[i])
-        sum++;
-    i++;
-    count++;
-}
-if (sum == array / 2)
-{
-    Console.WriteLine("данное число является палиндромом");
-}
-else
-{
-    Console.WriteLine("данное число НЕ является палиндромом");
-}
+﻿Console.WriteLine("введите цифру");
+double xa = double.Parse(Console.ReadLine());
+Console.WriteLine("введите цифру");
+double ya = double.Parse(Console.ReadLine());
+Console.WriteLine("введите цифру");
+double za = double.Parse(Console.ReadLine());
+Console.WriteLine("введите цифру");
+double xb = double.Parse(Console.ReadLine());
+Console.WriteLine("введите цифру");
+double yb = double.Parse(Console.ReadLine());
+Console.WriteLine("введите цифру");
+double zb = double.Parse(Console.ReadLine());
+
+double d=Math.Sqrt(Math.Pow(xa - xb, 2) + Math.Pow(ya - yb, 2) + Math.Pow(za - zb, 2));
+Console.WriteLine(d);
+
 
 
