@@ -1,17 +1,15 @@
 ﻿Console.WriteLine("введите число");
 char[] a = Console.ReadLine().ToCharArray();
-int array = a.Length;
+int b = a.Length;
 int i = 0;
-int count = 1;
 int sum = 0;
-while (count < array / 2 + 1)
+for (int c = 1; c < b / 2 + 1; c++)
 {
-    if (a[a.Length - count] == a[i])
+    if (a[a.Length - c] == a[i])
         sum++;
     i++;
-    count++;
 }
-if (sum == array / 2)
+if (sum == b / 2)
 {
     Console.WriteLine("данное число является палиндромом");
 }
