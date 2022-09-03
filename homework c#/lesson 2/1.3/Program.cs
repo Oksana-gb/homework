@@ -51,3 +51,4 @@ Console.WriteLine(d);
 
 // int n = 5;
 // Console.WriteLine(String.Join(" ",Enumerable.Range(1, n).Select(n => n*n)));
+
