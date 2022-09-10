@@ -78,24 +78,122 @@
 
 // Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
 
-int[] array = new int[8];
+// int[] array = new int[8];
 
-int[] method(int[] a)
+// int[] method(int[] a)
+// {
+//     for (int i = 0; i < a.Length; i++)
+//     {
+//         a[i] = new Random().Next(0, 2);
+//     }
+//     return a;
+// }
+
+// void print(int[] b)
+// {
+//     for (int i = 0; i < b.Length; i++)
+//     {
+//        Console.Write(b[i]);
+//     }
+// }
+
+// method(array);
+// print(array);
+
+
+//Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9].
+//Найдите сумму отрицательных и положительных элементов массива.
+
+int[] GetArray(int size, int minValue, int maxValue)
 {
-    for (int i = 0; i < a.Length; i++)
+    int[] res = new int[size];
+
+    for (int i = 0; i < size; i++)
     {
-        a[i] = new Random().Next(0, 2);
+        res[i] = new Random().Next(minValue, maxValue + 1);
     }
-    return a;
+    return res;
 }
 
-void print(int[] b)
-{
-    for (int i = 0; i < b.Length; i++)
-    {
-       Console.Write(b[i]);
-    }
-}
+// void PrintArray(int[] array)
+// {
+//     Console.WriteLine("Вывод массива: ");
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine("");
+// }
 
-method(array);
-print(array);
+
+// int[] array = GetArray(12, -9, 9);
+// PrintArray(array);
+
+// int positiveSum = 0;
+// int negativeSum = 0;
+
+// foreach (int value in array)
+// {
+// positiveSum += value > 0 ? value : 0;
+// negativeSum += value < 0 ? value : 0;
+// }
+
+// Console.WriteLine($"Positive sum = {positiveSum}, negative sum = {negativeSum} ");
+
+// ---------------------------------
+
+// Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+
+// int[] array = GetArray(12,-10,10);
+
+// PrintArray(array);
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i]*=-1;
+// }
+
+// PrintArray(array);
+
+//-------------------------------------------
+
+// Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве. (не мое решение)
+
+// int[] array = GetArray(12, -10, 10);
+// PrintArray(array);
+
+// string search(int[] array_num, int num)
+// {
+// for (int i = 0; i < array_num.Length; i++)
+// {
+// if (array_num[i] == num)
+// {
+// return "Число есть";
+// }
+// }
+// return"Числа нет";
+// }
+
+// Console.WriteLine(search(array, 5));
+
+// ---------------------------------------------------
+
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
+
+// int Sum(int[] arr)
+// {
+//     int col = 0;
+//     foreach (int value in arr)
+//     {
+//         if (value > 10 && value < 100)
+//         {
+//             col+=1;
+//         }
+//     }
+//     return col;
+// }
+
+int[] array = GetArray(123, -200, 200);
+// PrintArray(array);
+// Console.WriteLine(Sum(array));
+
+

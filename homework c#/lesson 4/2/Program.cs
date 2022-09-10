@@ -8,8 +8,8 @@ int Count(int numA)
     int sum = 0;
     while (numA > 0)
     {
+        sum += numA % 10;
         numA /= 10;
-        sum++;
     }
     return sum;
 }
