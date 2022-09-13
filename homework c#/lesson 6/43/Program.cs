@@ -9,12 +9,12 @@ else
 Console.Write($"точка пересечения: ({x}; {y})");
 }
 
-Console.WriteLine("Input b1: ");
+Console.WriteLine("введите число b1: ");
 int b1 = int.Parse(Console.ReadLine());
-Console.WriteLine("Input k1: ");
+Console.WriteLine("введите число k1: ");
 int k1 = int.Parse(Console.ReadLine());
-Console.WriteLine("Input b2: ");
+Console.WriteLine("введите число b2: ");
 int b2 = int.Parse(Console.ReadLine());
-Console.WriteLine("Input k2: ");
+Console.WriteLine("введите число k2: ");
 int k2 = int.Parse(Console.ReadLine());
 CrossPoint(k1,b1,k2,b2);
