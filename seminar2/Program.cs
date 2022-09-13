@@ -104,16 +104,16 @@
 //Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9].
 //Найдите сумму отрицательных и положительных элементов массива.
 
-int[] GetArray(int size, int minValue, int maxValue)
-{
-    int[] res = new int[size];
+// int[] GetArray(int size, int minValue, int maxValue)
+// {
+//     int[] res = new int[size];
 
-    for (int i = 0; i < size; i++)
-    {
-        res[i] = new Random().Next(minValue, maxValue + 1);
-    }
-    return res;
-}
+//     for (int i = 0; i < size; i++)
+//     {
+//         res[i] = new Random().Next(minValue, maxValue + 1);
+//     }
+//     return res;
+// }
 
 // void PrintArray(int[] array)
 // {
@@ -192,8 +192,92 @@ int[] GetArray(int size, int minValue, int maxValue)
 //     return col;
 // }
 
-int[] array = GetArray(123, -200, 200);
+// int[] array = GetArray(123, -200, 200);
 // PrintArray(array);
 // Console.WriteLine(Sum(array));
 
+// --------------------
 
+//Напишите программу, которая перевернёт одномерный массив (последний элемент будет на первом месте, а первый - на последнем и т.д.)
+
+// int[] GetArray(int size, int minValue, int maxValue)
+// {
+// int[] res = new int[size];
+
+// for (int i = 0; i < size; i++)
+// {
+// res[i] = new Random().Next(minValue, maxValue + 1);
+// }
+
+// return res;
+// }
+
+// void ReversArray(int[] inArray)
+// {
+// for (int i = 0; i < inArray.Length / 2; i++)
+// {
+// int k = inArray[i];
+// inArray[i] = inArray[inArray.Length - i - 1];
+// inArray[inArray.Length - i - 1] = k;
+// }
+// }
+
+// int[] array = GetArray(9, 0, 10);
+// Console.WriteLine(String.Join(" ", array));
+
+// ReversArray(array);
+// Console.WriteLine(String.Join(" ", array));
+
+// Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+// Console.WriteLine("введите число");
+// int a = int.Parse(Console.ReadLine());
+// string result="";
+// while (a>0)
+// {
+//     result = a%2 + result;
+//     a/=2;
+// }
+// Console.Write(result);
+
+
+// int number = int.Parse(Console.ReadLine());
+
+// string res1 = Convert.ToString(number, 2); //varint 1
+// // string res2 = DecToNum(number, 2);      //varint 2
+
+// Console.WriteLine($"{number}->{res1}");
+
+// // Универсальный математический для перевода из 10 в любую
+// string DecToNum(int decNumber, int otherSystem)
+// {
+// string res = "";
+// string nums = "0123456789ABCDEF";
+// while (decNumber > 0)
+// {
+// int ost = decNumber / otherSystem;
+// res = nums[decNumber - otherSystem * ost] + res;
+// decNumber /= otherSystem;
+// }
+// return res;
+// }
+
+// Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+
+
+// int a = int.Parse(Console.ReadLine());
+// int b = int.Parse(Console.ReadLine());
+// int c = int.Parse(Console.ReadLine());
+
+// if (a+b>c & a+c>b & c+b>a)
+// {
+//     Console.WriteLine("да");
+// }
+// else
+// {
+//     Console.WriteLine("нет");
+// }
+
+string[] st = Console.ReadLine().Split(' ',StringSplitOptions.RemoveEmptyEntries);
+bool IsTriangle(int a, int b, int c) { return (((a + b) > c) && ((a + c) > b) && ((b + c) > a)); }
+Console.WriteLine(IsTriangle(int.Parse(st[0]), int.Parse(st[1]), int.Parse(st[2])));

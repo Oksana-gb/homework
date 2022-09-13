@@ -1,6 +1,6 @@
 ﻿// Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 
-int[] array = GetPrintArray(10, -10, 11);
+int[] array = GetPrintArray(10, 0, 11);
 Console.WriteLine();
 Console.WriteLine(SumOddNumber());
 

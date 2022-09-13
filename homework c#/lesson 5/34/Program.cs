@@ -17,14 +17,14 @@ void PrintArray(int[] array)
     }
     Console.WriteLine("");
 }
-int EvenNumbers (int[] arr)
+int EvenNumbers(int[] arr)
 {
-int sum = 0;
-foreach (int value in arr)
-{
-    sum += value % 2 == 0? 1: 0;
-}
-return sum;
+    int sum = 0;
+    foreach (int value in arr)
+    {
+        sum += value % 2 == 0 ? 1 : 0;
+    }
+    return sum;
 }
 
 int[] array = GetArray(10, 100, 1000);
