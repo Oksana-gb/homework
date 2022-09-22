@@ -425,51 +425,191 @@
 
 // Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
 
-int[,] GetArray(int m, int n, int minValue, int maxValue)
+// int[,] GetArray(int m, int n, int minValue, int maxValue)
+// {
+//     int[,] res = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             res[i, j] = new Random().Next(minValue, maxValue + 1);
+//         }
+//     }
+//     return res;
+// }
+
+// int Sum(int[,] arr)
+// {
+//     int a = 0;
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             a += i == j ? arr[i, j] : 0;
+//         }
+//     }
+//     Console.WriteLine(a);
+//     return a;
+// }
+
+// void PrintArray(int[,] inArray)
+// {
+//     for (int i = 0; i < inArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < inArray.GetLength(1); j++)
+//         {
+//             Console.Write(inArray[i, j] + "\t ");  //
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+//     Console.Write("Введите количество строк массива: ");
+//     int m = int.Parse(Console.ReadLine());
+
+//     Console.Write("Введите количество столбцов массива: ");
+//     int n = int.Parse(Console.ReadLine());
+
+//     int[,] array = GetArray(m, n, 0, 10);
+//     PrintArray(array);
+//     Sum(array);
+// --------------------------------------------------
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue)
+// {
+//     int[,] res = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             res[i, j] = new Random().Next(minValue, maxValue + 1);
+//         }
+//     }
+//     return res;
+// }
+
+// void PrintArray(int[,] inArray)
+// {
+//     for (int i = 0; i < inArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < inArray.GetLength(1); j++)
+//         {
+//             Console.Write(inArray[i, j] + "\t ");  //
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int[,] ArrayReplacement(int[,] matr)
+// {            
+//     int some = 0;        
+//     for (int i = 0; i < matr.GetLength(1); i++)
+//     {
+//         some = matr[0,i];
+//         matr[0,i] = matr[matr.GetLength(0)-1, i];
+//         matr[matr.GetLength(0)-1, i] = some;
+//     }
+//     return matr;
+// }
+
+
+// int[,] arr = GetArray(4, 3, 0, 10);
+// PrintArray(arr);
+// ArrayReplacement(arr);
+// Console.WriteLine();
+// PrintArray(arr);
+// ---------------------------------------------------------
+// Задача 55: Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. В случае, если это невозможно, программа должна вывести сообщение для пользователя.
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue)
+// {
+//     int[,] res = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             res[i, j] = new Random().Next(minValue, maxValue + 1);
+//         }
+//     }
+//     return res;
+// }
+
+// void PrintArray(int[,] inArray)
+// {
+//     for (int i = 0; i < inArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < inArray.GetLength(1); j++)
+//         {
+//             Console.Write(inArray[i, j] + "\t ");  //
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// void Replacement(int[,] arr)
+// {
+//     if (arr.GetLength(0) == arr.GetLength(1))
+//     {
+//         int some = 0;
+//         for (int i = 0; i < arr.GetLength(0); i++)
+//         {
+//             for (int j = i; j < arr.GetLength(0); j++)
+//             {
+//                 some = arr[j, i];
+//                 arr[j, i] = arr[i, j];
+//                 arr[i, j] = some;
+//             }
+//         }
+//     }
+
+//     else
+//     {
+//         Console.WriteLine("это невозможно");
+//     }
+// }
+
+
+// int[,] array = GetArray(2, 2, 0, 10);
+// PrintArray(array);
+// Replacement(array);
+// Console.WriteLine();
+// PrintArray(array); 
+// -----------------------------------------------------
+
+// Задача 57: Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+
+double[,] GetPrintArray(int m, int n, int max)
 {
-    int[,] res = new int[m, n];
+    double[,] res = new double[m, n];
+    Random rand = new Random();  
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            res[i, j] = new Random().Next(minValue, maxValue + 1);
+            res[i, j] = Math.Round((rand.NextDouble() - 0.5) * 2 * max, 0);
+            Console.Write(res[i, j] + "\t");
         }
+        Console.WriteLine();
     }
     return res;
 }
 
-int Sum(int[,] arr)
+double FindNumber(double minValue, double MaxValue, double[,] arr)
 {
-    int a = 0;
-    for (int i = 0; i < arr.GetLength(0); i++)
-    {
-        for (int j = 0; j < arr.GetLength(1); j++)
+    int sum = 0;
+        foreach (double value in arr)
         {
-            a += i == j ? arr[i, j] : 0;
+            sum = 0;
+            foreach (double a in arr)
+            {
+                sum += a  == value ? 1 : 0;
+            }
+            Console.WriteLine($"число {value} всстречается {sum} раз");
         }
-    }
-    Console.WriteLine(a);
-    return a;
+
+    return sum;
 }
 
-void PrintArray(int[,] inArray)
-{
-    for (int i = 0; i < inArray.GetLength(0); i++)
-    {
-        for (int j = 0; j < inArray.GetLength(1); j++)
-        {
-            Console.Write(inArray[i, j] + "\t ");  //
-        }
-        Console.WriteLine();
-    }
-}
+double[,] array = GetPrintArray(3, 3, 10);
+FindNumber(-10, 10, array);
 
-    Console.Write("Введите количество строк массива: ");
-    int m = int.Parse(Console.ReadLine());
-
-    Console.Write("Введите количество столбцов массива: ");
-    int n = int.Parse(Console.ReadLine());
-
-    int[,] array = GetArray(m, n, 0, 10);
-    PrintArray(array);
-    Sum(array);

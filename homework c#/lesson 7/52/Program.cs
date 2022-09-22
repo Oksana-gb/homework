@@ -19,12 +19,12 @@ void ArithmeticMeanColumn(int [,] arr)
 {
     for (int j = 0; j < arr.GetLength(1); j++)
     {
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i < arr.GetLength(0); i++)
         {
             sum+= arr[i, j];
         }
-        Console.Write(Math.Round((double)sum/arr.GetLength(1),1) + "\t");
+        Console.Write(Math.Round(sum/arr.GetLength(1),1) + "\t");
     }
 }
 
