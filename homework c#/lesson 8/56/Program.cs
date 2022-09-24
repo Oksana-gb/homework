@@ -29,7 +29,7 @@ int FindMinSum(int[,] arr)
 {
     int sum = 0;
     int row = 1;
-    int minSum =10*arr.GetLength(1);
+    int minSum =Int32.MaxValue;
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
