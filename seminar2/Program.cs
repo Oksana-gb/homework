@@ -578,38 +578,85 @@
 
 // Задача 57: Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
 
-double[,] GetPrintArray(int m, int n, int max)
+// double[,] GetPrintArray(int m, int n, int max)
+// {
+//     double[,] res = new double[m, n];
+//     Random rand = new Random();  
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             res[i, j] = Math.Round((rand.NextDouble() - 0.5) * 2 * max, 0);
+//             Console.Write(res[i, j] + "\t");
+//         }
+//         Console.WriteLine();
+//     }
+//     return res;
+// }
+
+// double FindNumber(double minValue, double MaxValue, double[,] arr)
+// {
+//     int sum = 0;
+//         foreach (double value in arr)
+//         {
+//             sum = 0;
+//             foreach (double a in arr)
+//             {
+//                 sum += a  == value ? 1 : 0;
+//             }
+//             Console.WriteLine($"число {value} всстречается {sum} раз");
+//         }
+
+//     return sum;
+// }
+
+// double[,] array = GetPrintArray(3, 3, 10);
+// FindNumber(-10, 10, array);
+
+// Sergey: Задача 63: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+
+// int a= int.Parse(Console.ReadLine());
+
+// int[] array = new int[a];
+// for (int i = 0; i < a; i++)
+// {
+//     array[i]=i+1;
+// }
+// Console.Write(string.Join(" ", array));
+
+// // пример рекурсии (вывод факториала числа)
+
+// string PrintNumbers(int start, int end)
+// {
+// if (start == end) return start.ToString();
+// return (start + " " + PrintNumbers(start + 1, end));
+// }
+
+// Console.Write(PrintNumbers(0,8));
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+
+int PrintNumbers(int start, int end)
 {
-    double[,] res = new double[m, n];
-    Random rand = new Random();  
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            res[i, j] = Math.Round((rand.NextDouble() - 0.5) * 2 * max, 0);
-            Console.Write(res[i, j] + "\t");
-        }
-        Console.WriteLine();
-    }
-    return res;
+    if (end == start ) return start;
+    return (start+PrintNumbers(start+1, end));
 }
+Console.Write(PrintNumbers(1,15));
 
-double FindNumber(double minValue, double MaxValue, double[,] arr)
-{
-    int sum = 0;
-        foreach (double value in arr)
-        {
-            sum = 0;
-            foreach (double a in arr)
-            {
-                sum += a  == value ? 1 : 0;
-            }
-            Console.WriteLine($"число {value} всстречается {sum} раз");
-        }
+//  2-е решение
+// void Zadacha32()
+// {
+// Console.WriteLine("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Сумма цифр числа " + number + " равна " + Recursion(number));
 
-    return sum;
-}
-
-double[,] array = GetPrintArray(3, 3, 10);
-FindNumber(-10, 10, array);
-
+// int Recursion(int number)
+// {
+// if (number == 0)
+// {
+// return 0;
+// }
+// return (Recursion(number / 10) + number % 10);
+// }
+// }
+// Zadacha32();
